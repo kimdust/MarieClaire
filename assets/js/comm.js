@@ -62,3 +62,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // 스크롤 이벤트 감지
   window.addEventListener("scroll", handleInfoSectionScroll);
 });
+
+function resourcesLoaded() {
+  return document.readyState === "complete";
+}
+
+// 페이지가 로드되면 이미지 로딩 체크 시작
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingPage = document.getElementById("load");
+  if (resourcesLoaded()) {
+    loadingPage.style.display = "none";
+  } else {
+    // 모든 리소스가 로드될 때까지 기다림
+    document.onreadystatechange = function () {
+      if (resourcesLoaded()) {
+        loadingPage.style.display = "none";
+      }
+    };
+  }
+});
