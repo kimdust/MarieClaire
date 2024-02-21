@@ -314,16 +314,23 @@ body {
 
 #info {
   width: 100%;
-  height: 970px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #fff;
+  position: relative;
 }
 #info .info_img {
   width: 50%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 #info .info_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: none;
   transition: opacity 0.5s ease;
@@ -335,24 +342,46 @@ body {
   width: 50%;
   padding: 30px;
   font-size: 18px;
+  overflow-y: auto;
 }
 #info .info_txt h2 {
   font-size: 50px;
   font-weight: 700;
 }
-#info .info_txt h3 {
-  padding-bottom: 30px;
+#info .info_txt .intro_txt {
+  padding: 50px 0 100px 0;
+  font-size: 24px;
 }
-#info .info_txt ul .info_1depth {
+#info .info_txt .info_list .info_1depth {
   font-weight: 700;
 }
-#info .info_txt ul .info_2depth {
+#info .info_txt .info_list .info_2depth {
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+}
+#info .info_txt .info_nav {
+  font-size: 24px;
+}
+#info .info_txt .info_nav .nav_1depth {
+  display: flex;
+  width: 700px;
+  padding: 20px 0;
+}
+#info .info_txt .info_nav .nav_1depth a {
+  color: #000;
+  font-weight: 700;
+  margin-right: 50px;
+}
+#info .info_txt .info_nav .nav_1depth a:hover {
+  color: #ffcc34;
+}
+#info .info_txt .info_nav .nav_1depth .nav_2depth {
+  display: inline;
+  margin-right: 20px;
 }
 #info .info_txt .last_txt {
   font-size: 30px;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 #info .info_txt .last_txt strong {
   font-weight: 700;
@@ -360,8 +389,43 @@ body {
 
 #collection {
   width: 100%;
-  height: 950px;
-  background: yellow;
+  height: 830px;
+  background: red;
+}
+#collection h2 {
+  font-size: 50px;
+  font-weight: 700;
+  padding: 30px;
+  padding-bottom: 0;
+}
+#collection .mySwiper {
+  padding: 40px 0;
+}
+#collection .mySwiper swiper-slide {
+  text-align: center;
+  color: #fff;
+}
+#collection .mySwiper swiper-slide img {
+  width: 300px;
+}
+#collection .mySwiper swiper-slide p {
+  font-weight: 200;
+}
+#collection .mySwiper swiper-slide strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#footer {
+  width: 100%;
+  height: 125px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer img {
+  width: 300px;
 }
 
 .belt .belt_inner {

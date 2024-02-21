@@ -56,17 +56,17 @@ function animateModel(object) {
 }
 
 loadModel(
-  "images/3d/book.mtl",
-  "images/3d/book.obj",
+  "images/3d/main/main-2401.mtl",
+  "images/3d/main/main-2401.obj",
   new THREE.Vector3(-5, -1.5, 0)
 );
 loadModel(
-  "images/3d/book2.mtl",
-  "images/3d/book2.obj",
+  "images/3d/main/main-2402.mtl",
+  "images/3d/main/main-2402.obj",
   new THREE.Vector3(0, -1.5, 0)
 );
 loadModel(
-  "images/3d/book3.mtl",
-  "images/3d/book3.obj",
+  "images/3d/main/main-2403.mtl",
+  "images/3d/main/main-2403.obj",
   new THREE.Vector3(5, -1.5, 0)
 );
